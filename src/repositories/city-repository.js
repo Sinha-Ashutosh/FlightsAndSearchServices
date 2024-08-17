@@ -34,7 +34,7 @@ class CityRepository {
             });
             return city;
         }catch (error) {
-            console.log("Somethinng went wrong n repository level");
+            console.log("Somethinng went wrong in repository level");
             throw {error};
         }
     }
@@ -44,7 +44,7 @@ class CityRepository {
             const city = await City.findByPk(cityId);
             return city;
         }catch (error) {
-            console.log("Somethinng went wrong n repository level");
+            console.log("Somethinng went wrong in repository level");
             throw {error};
         }
     }
