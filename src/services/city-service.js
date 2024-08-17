@@ -1,8 +1,8 @@
-const { CityRepository } = require('../repository/index');
+const { CityServices, CityRepository } = require('../repositories/index');
 
 class CityService {
-    cosntructor(){
-        this.cityRepositoryityRepository = new CityRepository();
+    constructor(){
+        this.cityRepository = new CityRepository();
     }
 
     async createCity(data) {
