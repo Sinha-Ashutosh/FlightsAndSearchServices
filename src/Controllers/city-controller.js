@@ -48,7 +48,7 @@ const get = async (req, res) => {
     try{ 
         const city = await cityService.getCity(req.params.id);
         return res.status(200).json({
-            data: response,
+            data: city,
             success: true,
             message: 'Successfully fetched a city',
             err: {}
@@ -87,7 +87,8 @@ const update = async (req, res) => {
 
 const getAll = async (req, res) => {
     try {
-        const cities = await cityService.getAllCites();
+        console.log(req.params);
+        const cities = await cityService.getAllCites(req.query);
         return  res.status(200).json({
             data: cities,
             success: true,
